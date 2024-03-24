@@ -1,0 +1,472 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>README | raccoon的博客小站</title><meta name="author" content="raccoon"><meta name="copyright" content="raccoon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="ArchLinux 前言正如我预料到的那样，选择arch确实是一个正确的决定，在高度定制的环境和详细的说明文档中，亲自搭建自己的工作区，是一种莫大的乐趣，这种乐趣本身也是一种学习。 在使用arch的过程中往往会遇到很多发疯的时刻，比方说明明按照教程来但是却完全不符合我的预期，这种情况我戏称为“计算机学科不存在了”。这种发疯常常让人达到废寝忘食的程度，可能早晨9点起来一直趴在桌子上到下午四点，为了一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="README">
+<meta property="og:url" content="https://raccoon.love/c1318ce9/index.html">
+<meta property="og:site_name" content="raccoon的博客小站">
+<meta property="og:description" content="ArchLinux 前言正如我预料到的那样，选择arch确实是一个正确的决定，在高度定制的环境和详细的说明文档中，亲自搭建自己的工作区，是一种莫大的乐趣，这种乐趣本身也是一种学习。 在使用arch的过程中往往会遇到很多发疯的时刻，比方说明明按照教程来但是却完全不符合我的预期，这种情况我戏称为“计算机学科不存在了”。这种发疯常常让人达到废寝忘食的程度，可能早晨9点起来一直趴在桌子上到下午四点，为了一">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/avatar.JPG">
+<meta property="article:published_time" content="2023-02-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-16T16:00:00.000Z">
+<meta property="article:author" content="raccoon">
+<meta property="article:tag" content="no_tag">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/avatar.JPG"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://raccoon.love/c1318ce9/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":100,"position":"top","messagePrev":"距离上次更新已经过去了","messageNext":"天，文章所述内容可能已经发生变化，请留意"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'README',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-17 00:00:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.css"><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/avatar.JPG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">54</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">24</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-regular fa-address-card"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw far fa-compass"></i><span> 专栏</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/index/journey/"><i class="fa-fw fas fa-earth-americas"></i><span> 旅程</span></a></li><li><a class="site-page child" href="/index/yoyo/"><span> 🪀 悠悠</span></a></li><li><a class="site-page child" href="/index/edu/"><i class="fa-fw fas fa-graduation-cap"></i><span> 支教</span></a></li><li><a class="site-page child" href="/index/tech/"><i class="fa-fw fab fa-ubuntu"></i><span> 纯纯寄术流</span></a></li><li><a class="site-page child" href="/index/letter"><i class="fa-fw fas fa-envelope"></i><span> 雲笺信语</span></a></li><li><a class="site-page child" href="/index/other"><i class="fa-fw fas fa-link"></i><span> 其他</span></a></li><li><a class="site-page child" href="/index/private"><i class="fa-fw fas fa-lock"></i><span> 私密</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347),linear-gradient(210deg, #ff9a9e, #fad0c4, #fad0c4),linear-gradient(180deg, #232526, #414345, #5e6062),linear-gradient(165deg, #56ab2f, #a8e063, #76ba1b),linear-gradient(150deg, #accbee, #e7f0fd, #ffffff),linear-gradient(135deg, #e6e9af, #e8c37e, #f4d03f),linear-gradient(120deg, #DA22FF, #9733EE, #65799B, #5E2563),linear-gradient(90deg, #0f2027, #203a43, #2c5364),linear-gradient(75deg, #9be15d, #00e3ae, #88d8b0),linear-gradient(60deg, #ff7e5f, #feb47b, #ff7e5f, #fcb045),linear-gradient(45deg, #2e8b57, #48d1cc, #00ced1, #7fffd4),linear-gradient(165deg, #3e5151, #decba4),linear-gradient(150deg, #2E3192, #1BFFFF),linear-gradient(135deg, #ee9ca7, #ffdde1),linear-gradient(120deg, #FF5F6D, #FFC371),linear-gradient(105deg, #000428, #004e92),linear-gradient(90deg, #D9AFD9, #97D9E1),linear-gradient(75deg, #0f0c29, #302b63, #24243e),linear-gradient(60deg, #C9FFBF, #FFAFBD, #FFF),linear-gradient(45deg, #FFB75E, #ED8F03),linear-gradient(30deg, #5f2c82, #49a09d)"><nav id="nav"><span id="blog-info"><a href="/" title="raccoon的博客小站"><span class="site-name">raccoon的博客小站</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-regular fa-address-card"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw far fa-compass"></i><span> 专栏</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/index/journey/"><i class="fa-fw fas fa-earth-americas"></i><span> 旅程</span></a></li><li><a class="site-page child" href="/index/yoyo/"><span> 🪀 悠悠</span></a></li><li><a class="site-page child" href="/index/edu/"><i class="fa-fw fas fa-graduation-cap"></i><span> 支教</span></a></li><li><a class="site-page child" href="/index/tech/"><i class="fa-fw fab fa-ubuntu"></i><span> 纯纯寄术流</span></a></li><li><a class="site-page child" href="/index/letter"><i class="fa-fw fas fa-envelope"></i><span> 雲笺信语</span></a></li><li><a class="site-page child" href="/index/other"><i class="fa-fw fas fa-link"></i><span> 其他</span></a></li><li><a class="site-page child" href="/index/private"><i class="fa-fw fas fa-lock"></i><span> 私密</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">README</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-28T16:00:00.000Z" title="发表于 2023-03-01 00:00:00">2023-03-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-16T16:00:00.000Z" title="更新于 2023-03-17 00:00:00">2023-03-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BA%AF%E7%BA%AF%E5%AF%84%E6%9C%AF%E6%B5%81/">纯纯寄术流</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BA%AF%E7%BA%AF%E5%AF%84%E6%9C%AF%E6%B5%81/%E8%80%83%E5%8F%A4/">考古</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BA%AF%E7%BA%AF%E5%AF%84%E6%9C%AF%E6%B5%81/%E8%80%83%E5%8F%A4/Arch/">Arch</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="README"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="ArchLinux"><a href="#ArchLinux" class="headerlink" title="ArchLinux"></a>ArchLinux</h1><p><img src="/home/raccoon/.config/Typora/typora-user-images/image-20230223082638948.png" alt="image-20230223082638948"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>正如我预料到的那样，选择arch确实是一个正确的决定，在高度定制的环境和详细的说明文档中，亲自搭建自己的工作区，是一种莫大的乐趣，这种乐趣本身也是一种学习。</p>
+<p>在使用arch的过程中往往会遇到很多发疯的时刻，比方说明明按照教程来但是却完全不符合我的预期，这种情况我戏称为<strong>“计算机学科不存在了”</strong>。这种发疯常常让人达到废寝忘食的程度，可能早晨9点起来一直趴在桌子上到下午四点，为了一个bug，甚至可以一直不吃饭。亦或许会放弃考试复习的时间。兴许是有些不务正业，但在软院大三的高压学习和摆烂氛围下找到一件感兴趣的事情也许并不算一件坏事。至少，我已经很少感受到这种兴奋和探索的乐趣了。</p>
+<p>正如我和哲源所说，解决arch的问题，应当抱有一种<strong>“技术爆炸”</strong>的态度，只有学习的东西足以覆盖出现bug的问题域，才能有较大的把握解决它。而当你没有完全掌握这个领域的知识却要使用它时，就要做好你无法掌控的准备。这就好比火鸡和农场主，我在农场主的帮助下，可以接触到计算机不存在了的原因，其实是更深层的计算机知识，因此，只有我认知范围内的计算机学科可能不存在，更大范围内的依然是真理。</p>
+<p>感谢所有在我使用archlinux中提供帮助的教程、博客和亲授操作的朋友们。</p>
+<p>2023.2.23</p>
+<h2 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h2><ul>
+<li>diaplay manager：显示管理器，也是arch login的ui。 我使用了lightdm 来代替KDE桌面的管理器</li>
+<li>i3 windows manager：窗口管理器，脱离了桌面环境的管理方式，轻量级，高效化。但需要自己配置很多东西</li>
+<li>DE（desktop environment）：桌面环境，传统的桌面管理方式，将桌面显示为任务栏和堆叠化窗口</li>
+<li>yay：arch下的包管理器</li>
+</ul>
+<h2 id="1-ArchLinux安装"><a href="#1-ArchLinux安装" class="headerlink" title="1. ArchLinux安装"></a>1. ArchLinux安装</h2><ul>
+<li>lightdm自动登陆：</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/lightdm/lightdm.conf</span><br><span class="line"></span><br><span class="line"><span class="comment">#change follow,在以下标记中寻找即可</span></span><br><span class="line">[Seat:*]</span><br><span class="line">autologin-user=raccoon</span><br><span class="line">autologin-user-timeout=0</span><br></pre></td></tr></table></figure>
+<h2 id="2-i3wm安装配置"><a href="#2-i3wm安装配置" class="headerlink" title="2. i3wm安装配置"></a>2. i3wm安装配置</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S i3</span><br><span class="line">kate ~/.config/i3/config &amp;</span><br></pre></td></tr></table></figure>
+<p>i3的配置文件在~/.config/i3/config中，今后将以该文件和~/.zshrc来管理大部分的操作</p>
+<h3 id="2-1-显示管理"><a href="#2-1-显示管理" class="headerlink" title="2.1 显示管理"></a>2.1 显示管理</h3><p>reference：<a target="_blank" rel="noopener" href="https://blog.csdn.net/syh_486_007/article/details/71158022">1</a> <a target="_blank" rel="noopener" href="https://www.cnblogs.com/WaterGe/p/12133555.html">2</a> <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/71536834">3</a></p>
+<p>通过xrandr即可</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">xrandr <span class="comment">#查看设备</span></span><br><span class="line">xrandr --output DP-1 --auto --output eDP-1 --off <span class="comment">#关闭其中一个设备</span></span><br><span class="line">xrandr --output eDP-1 --auto --output DP-1 --off <span class="comment">#之在笔记本上显示</span></span><br><span class="line">xrandr --output DP-1 --auto --above eDP-1 --auto <span class="comment">#多屏协动</span></span><br><span class="line">千万不要尝试把两个屏幕都关掉!!!</span><br><span class="line">参考3中有多屏移动工作区的命令，我认为不常用</span><br></pre></td></tr></table></figure>
+<p>将这几行命令写入zshrc</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#显示屏</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">disp</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span> [[ <span class="variable">$1</span> == <span class="string">&#x27;aoc&#x27;</span> ]];<span class="keyword">then</span></span><br><span class="line">        xrandr --output DP-1 --auto --output eDP-1 --off</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">if</span> [[ <span class="variable">$1</span> == <span class="string">&#x27;bjb&#x27;</span> ]];<span class="keyword">then</span></span><br><span class="line">        xrandr --output eDP-1 --auto --output DP-1 --off</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">if</span> [[ <span class="variable">$1</span> == <span class="string">&#x27;all&#x27;</span> ]];<span class="keyword">then</span></span><br><span class="line">        xrandr --output DP-1 --auto --above eDP-1 --auto</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>遇到问题就拔下来重新插</p>
+<p>注意, 盲打的时候是否是中文输入法</p>
+<p>其次, 可以使用arandr进行图形化的配置</p>
+<h3 id="2-2-触控板管理"><a href="#2-2-触控板管理" class="headerlink" title="2.2 触控板管理"></a>2.2 触控板管理</h3><p>references：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/116957768">知乎</a> <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Touchpad_Synaptics">archwiki</a></p>
+<p>参照archwiki，安装xf86-input-synaptics</p>
+<p>在/etc/X11/xorg.cinf.d/70-synaptics.conf中添加</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Section <span class="string">&quot;InputClass&quot;</span></span><br><span class="line">    Identifier <span class="string">&quot;touchpad&quot;</span></span><br><span class="line">    Driver <span class="string">&quot;libinput&quot;</span></span><br><span class="line">    MatchIsTouchpad <span class="string">&quot;on&quot;</span></span><br><span class="line">    Option <span class="string">&quot;Tapping&quot;</span> <span class="string">&quot;on&quot;</span></span><br><span class="line">    Option <span class="string">&quot;NaturalScrolling&quot;</span> <span class="string">&quot;true&quot;</span></span><br><span class="line">    Option <span class="string">&quot;ClickMethod&quot;</span> <span class="string">&quot;clickfinger&quot;</span></span><br><span class="line">    Option <span class="string">&quot;RBCornerButton&quot;</span> <span class="string">&quot;3&quot;</span></span><br><span class="line">EndSection</span><br></pre></td></tr></table></figure>
+<h3 id="2-3-窗口外观"><a href="#2-3-窗口外观" class="headerlink" title="2.3 窗口外观"></a>2.3 窗口外观</h3><p>参见文档</p>
+<p><a target="_blank" rel="noopener" href="https://i3wm.org/docs/userguide.html#vim_like_marks">https://i3wm.org/docs/userguide.html#vim_like_marks</a></p>
+<h4 id="边框"><a href="#边框" class="headerlink" title="边框:"></a>边框:</h4><p>可以通过设置pixel取消标题栏</p>
+<p>gap_inner设置窗口之间的间隙</p>
+<h4 id="颜色："><a href="#颜色：" class="headerlink" title="颜色："></a>颜色：</h4><p>一个较为一致性的方案是，通过X桌面设置，详见用户手册4.18</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.Xresources 应该包含这样一行</span></span><br><span class="line"><span class="comment"># *color0: #121212</span></span><br><span class="line"><span class="comment"># 并且必须正确加载，例如，通过使用</span></span><br><span class="line"><span class="comment"># xrdb ~/.Xresources</span></span><br><span class="line"><span class="comment"># 该值由其他应用程序获取（例如，URxvt 终端</span></span><br><span class="line"><span class="comment"># 模拟器）并且可以像这样在 i3 中使用：</span></span><br><span class="line">set_from_resource <span class="variable">$black</span> i3wm.color0 <span class="comment">#000000</span></span><br></pre></td></tr></table></figure>
+<p>更为细致的配色方案：在i3config中 详见4.22</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">经过多伦尝试，我发现对应的颜色显示地点如下：</span><br><span class="line">focused：border是多窗口并列时候的标签边框，back是标签背景，text是文字，ind好像是右边框？，child是子边框，也就是默认边框</span><br><span class="line">inactive：指的是容器顶部非聚焦</span><br><span class="line">unfocus：非容器顶部非聚焦</span><br><span class="line"><span class="comment"># class                 border  backgr. text    indicator child_border</span></span><br><span class="line"><span class="comment">#聚焦的窗口  红 浅蓝 淡绿 橙色 粉红</span></span><br><span class="line">client.focused          <span class="comment">#FF0000 #87CEFA #90EE90 #FF8C00   #FFB6C1</span></span><br><span class="line">client.focused_inactive <span class="comment">#333333 #5f676a #ffffff #484e50   #808080</span></span><br><span class="line">client.unfocused        <span class="comment">#333333 #222222 #888888 #292d2e   #808080</span></span><br><span class="line">client.urgent           <span class="comment">#2f343a #900000 #ffffff #900000   #900000</span></span><br><span class="line">client.placeholder      <span class="comment">#000000 #0c0c0c #ffffff #000000   #0c0c0c</span></span><br><span class="line">client.background       <span class="comment">#f1948a</span></span><br><span class="line">目测87CEFA和 8FBC8F 一个蓝色一个绿色 配起来都不错</span><br><span class="line">语法：</span><br><span class="line">&lt;colorclass&gt; &lt;border&gt; &lt;background&gt; &lt;text&gt; &lt;indicator&gt; &lt;child_border&gt;</span><br><span class="line">其中 colorclass 可以是以下之一：</span><br><span class="line">client.focused </span><br><span class="line">当前具有焦点的客户。</span><br><span class="line">client.focused_inactive</span><br><span class="line">一个客户端，它是其容器的焦点之一，但目前没有焦点。</span><br><span class="line">client.focused_tab_title</span><br><span class="line">作为获得焦点的容器的父项但未直接获得焦点的选项卡或堆栈容器标题。如果未指定，则默认为 focused_inactive，并且不使用指示器和 child_border 颜色。</span><br><span class="line">client.unfocused</span><br><span class="line">不是其容器的焦点之一的客户端。</span><br><span class="line">client.urgent </span><br><span class="line">已激活紧急提示的客户端。</span><br><span class="line">client.placeholder</span><br><span class="line">背景和文本颜色用于绘制占位符窗口内容（恢复布局时）。边框和指示器被忽略。</span><br><span class="line">client.background</span><br><span class="line">背景颜色将用于绘制客户端窗口的背景，客户端将在其上呈现。只有未覆盖此窗口整个区域的客户端才会显示颜色。请注意，此颜色类仅采用一种颜色。</span><br><span class="line"></span><br><span class="line">请注意，对于窗口装饰，子窗口周围的颜色是“child_border”，而“border”颜色只是标题栏周围的两条细线。</span><br><span class="line">指示器颜色用于指示将在何处打开新窗口。对于水平拆分容器，右边框将涂上指示器颜色，对于垂直拆分容器，底部边框。这仅适用于拆分容器内的单个窗口，否则无法将其与拆分容器外的单个窗口区分开来。</span><br></pre></td></tr></table></figure>
+<p>蓝粉配色：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># class                 border  backgr. text    indicator child_border</span></span><br><span class="line">client.focused          <span class="comment">#FFB6C1 #FFB6C1 #ffffff #000000   #FFB6C1</span></span><br><span class="line">client.focused_inactive <span class="comment">#FFB6C1 #87CEFA #ffffff #484e50   #87CEFA</span></span><br><span class="line">client.unfocused        <span class="comment">#FFB6C1 #87CEFA #ffffff #484e50   #87CEFA</span></span><br><span class="line">client.urgent           <span class="comment">#2f343a #900000 #ffffff #900000   #900000</span></span><br><span class="line">client.placeholder      <span class="comment">#000000 #0c0c0c #ffffff #000000   #0c0c0c</span></span><br><span class="line"></span><br><span class="line">client.background       <span class="comment">#f1948a</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-4-设置固定工作区"><a href="#2-4-设置固定工作区" class="headerlink" title="2.4 设置固定工作区:"></a>2.4 设置固定工作区:</h3><p>通过xprop获取窗口类型</p>
+<p>然后就可以将某个类型应用的默认打开方式设置到某个工作区啦</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">assign [class=<span class="string">&quot;firefox&quot;</span>] 2</span><br></pre></td></tr></table></figure>
+<h3 id="2-5-选定浮动窗口"><a href="#2-5-选定浮动窗口" class="headerlink" title="2.5 选定浮动窗口"></a>2.5 选定浮动窗口</h3><p>一个很有意思的现象是，我在设置<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for_window [class=<span class="string">&quot;alactritty&quot;</span>] floating <span class="built_in">enable</span></span><br></pre></td></tr></table></figure><br>的时候，发现设置无效，解决方案改成大写<br>我猜这里的是desktop文件里的识别名称，而exec里面放的就是终端命令</p>
+<p>窗口管理之—默认初始大小，透明化</p>
+<h3 id="2-6-设定窗口默认布局"><a href="#2-6-设定窗口默认布局" class="headerlink" title="2.6 设定窗口默认布局"></a>2.6 设定窗口默认布局</h3><h4 id="i3-layout"><a href="#i3-layout" class="headerlink" title="i3-layout"></a>i3-layout</h4><p><a target="_blank" rel="noopener" href="https://github.com/eliep/i3-layouts#layouts">https://github.com/eliep/i3-layouts#layouts</a></p>
+<p>需要进行：i3l启动，工作区布局绑定，方向移动绑定</p>
+<p>坏处是容器可能变乱，vstack布局暂时没啥问题</p>
+<h3 id="2-7-rofi"><a href="#2-7-rofi" class="headerlink" title="2.7 rofi"></a>2.7 rofi</h3><ul>
+<li>install</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S rofi</span><br></pre></td></tr></table></figure>
+<ul>
+<li>themes</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/newmanls/rofi-themes-collection#windows-11">https://github.com/newmanls/rofi-themes-collection#windows-11</a></p>
+<p>将需要的主题文件复制到.local/share/rofi/icons即可，然后在config里面选择</p>
+<p>配置主题应当在主题文件中，而不是在config中，rofi的config只用来设置modify和主题</p>
+<ul>
+<li>字体</li>
+</ul>
+<p>参见polybar，也是在主题文件中设置</p>
+<h3 id="2-8-polybar"><a href="#2-8-polybar" class="headerlink" title="2.8 polybar"></a>2.8 polybar</h3><ul>
+<li>themes</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/adi1090x/polybar-themes">https://github.com/adi1090x/polybar-themes</a></p>
+<ul>
+<li>还有一些其他dotfile里面的polybar配置，可以试试</li>
+</ul>
+<p><strong>polybar</strong>配置文件详解：</p>
+<p>首先，目前我启动polybar的方式为：i3中自动启动一个<code>.config/polybar/launch.sh</code></p>
+<p>这个sh链接到github仓库的sh, github仓库中的sh就是打开对应的config.init的shell命令</p>
+<p>通过切换不同的链接,可以实现不同polybar主题,目前我正在使用的主题是:keyitdev</p>
+<p><strong>config</strong>配置</p>
+<p>里面是很多模块, 参见github上的wiki, 每个模块类似于系统调用, 只要写明模块名称就会自动调用<code>sys/class/</code>底下的设备信息</p>
+<p>同时可以定义每个模块的特殊字符等等, 最后由 main bar里面的左中右来设置整个bar</p>
+<p>tray模块定义了系统图标</p>
+<ul>
+<li>bug</li>
+</ul>
+<p>polybar的报错信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Disabling module &quot;backlight&quot; (reason: The file &#x27;/sys/class/backlight/amdgpu_bl0/actual_brightness&#x27; does not exist)</span><br></pre></td></tr></table></figure>
+<p>这条信息大概是说,背光模块没加载出来(事实上在bar上面也是空的)</p>
+<p>因此引入linux背光调整,见backlight 2.15,这里写的是amdgpu,不知道我能不能手动改一下变成intel,那就解决了</p>
+<p>事实证明是对的,但是我在滚轮调节亮度的时候,出现了新的报错,估计是因为写入权限的问题</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">error: module/backlight: Unable to change backlight value. Your system may require additional configuration. Please read the module documentation.</span><br><span class="line">(reason: failed to write to /sys/class/backlight/intel_backlight/brightness: Permission denied)</span><br></pre></td></tr></table></figure>
+<p>把brightness文件设置为777权限即可<br>我用了非常神奇的602权限哈哈哈</p>
+<ul>
+<li>如何在开机时候自动将bright设置为602:</li>
+</ul>
+<p>这个操作是非常危险的,不建议用service的方式开机自动启动chmod脚本，这会使得整个系统变得杂乱</p>
+<p>在处理magickeyboard的fn功能键的时候遇到一个可行的解决方案, 见keyboard</p>
+<p>另一个报错信息<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tray: Failed to put tray above 0x1000002 in the stack (XCB_MATCH (8))</span><br></pre></td></tr></table></figure><br>这里大概是说,系统的tray模块没显示到什么什么地方,但是我自己没啥问题,就不管了</p>
+<p>后来我把tray-background设置为${color.background},使得系统图标可以有个背景,好看一点,这样可能不太好加模块半圆形, 但是也还不错</p>
+<p>最后我是把声音和背光都调整没了。感觉不太有用，都涉及到sys中的一些设备，很繁琐，不如终端 见2.15和2.16</p>
+<p>温度也删了，感觉读取不是很准确</p>
+<p>在机房电脑里面，配置k-vernooy的dotfiles时候，发现很多nerd图标不能正确显示。README里面提示我安装nerd字体，但是我明明安装了，却还是显示不出来。后来我用yay搜索了一下：</p>
+<p>发现是必须要安装<code>tty-hack-nerd</code>才行，划重点：必须带<code>nerd</code>，不过yysy,之前从github clone仓库的时候也是带nerd的，很奇怪</p>
+<p>不管怎么说，理解了nerd字体的工作原理是一件很不错的事。其实是一串编码：\uxxxx</p>
+<p>然后在nerd官网上可以找到大量的图标</p>
+<h3 id="2-9-alacritty"><a href="#2-9-alacritty" class="headerlink" title="2.9 alacritty"></a>2.9 alacritty</h3><ul>
+<li>themes</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/alacritty/alacritty-theme/">https://github.com/alacritty/alacritty-theme/</a></p>
+<p>关于alacritty的下载，建议去archwiki</p>
+<p><a target="_blank" rel="noopener" href="https://wiki.archlinuxcn.org/wiki/Alacritty">there</a></p>
+<p>经过测试，很难找到非常适合我的一款可爱粉嫩风终端配色，因此只好走赛博朋克风了</p>
+<p>Nord还是yyds的，其他的emmm,还有第一个afterglow, dark_pastels, everforest_dark<br>moonlight_ii_vscode, rainbow，rose-pine， tokyo-night-storm等等</p>
+<p>妈的。真的很难找，有时间自己做一个，我记得b站那位有教程</p>
+<p>字体上，选择JetBrainsMono Nerd Font<br>至于如何更换字体，在wiki上有<br>logo-ls失效</p>
+<h3 id="2-10-flameshot"><a href="#2-10-flameshot" class="headerlink" title="2.10 flameshot"></a>2.10 flameshot</h3><p>有卡顿，待解决</p>
+<p>存档到文件打开卡顿，存档到粘贴板粘贴卡顿，大佬教我用</p>
+<h3 id="2-11-picom"><a href="#2-11-picom" class="headerlink" title="2.11 picom"></a>2.11 picom</h3><p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Picom">https://wiki.archlinux.org/title/Picom</a></p>
+<p>需要禁用rofi阴影，否则太怪了</p>
+<p>透明度选项：可以调节聚焦和非聚焦透明度，可以设置opacity-rule单独为某个窗口设置透明</p>
+<p>alacritty和rofi为80</p>
+<p>打字窗口（popup_menu)在wintype里面设置为0.8</p>
+<p>dock栏设置为0.75</p>
+<p>关于圆角和模糊，暂时不准备搞了，有点卡-</p>
+<p>更新：picom有很多版本，我选择了其中的一种：</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV15V4y1g7L6/?spm_id_from=333.337.search-card.all.click&amp;vd_source=9fc1aeab20d64d4315c451b9c18d30d8">https://www.bilibili.com/video/BV15V4y1g7L6/?spm_id_from=333.337.search-card.all.click&amp;vd_source=9fc1aeab20d64d4315c451b9c18d30d8</a></p>
+<p>这个视频链接底下有github仓库，我直接用了里面的配置，修改了一些属性，比如把聚焦和非聚焦的透明度改成一致……</p>
+<p>但是卡顿现象还是有的，今天在4k屏上显示成功了，但是呢，很卡</p>
+<h3 id="2-12-feh"><a href="#2-12-feh" class="headerlink" title="2.12 feh"></a>2.12 feh</h3><p>切换壁纸，加random可以随机切换</p>
+<h3 id="2-13-无道词典"><a href="#2-13-无道词典" class="headerlink" title="2.13 无道词典"></a>2.13 无道词典</h3><p>终端查词的有道版本，github直接搜</p>
+<h3 id="2-14-分区gparted"><a href="#2-14-分区gparted" class="headerlink" title="2.14 分区gparted"></a>2.14 分区gparted</h3><p>这个好像是无损分区，调整佬boot平移都不影响efi</p>
+<h3 id="2-15-backlight背光调整"><a href="#2-15-backlight背光调整" class="headerlink" title="2.15 backlight背光调整"></a>2.15 backlight背光调整</h3><p>命令行的方式是往<code>sys/class/backlight/intel_backlight</code>里面写文件,最大亮度见max文件</p>
+<p>参考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/269714827#:~:text=%E9%9C%80%E8%A6%81%E8%B0%83%E8%8A%82%E4%BA%AE%E5%BA%A6%E6%97%B6%EF%BC%8C%E5%88%87%E6%8D%A2%E5%88%B0%20root%20%E7%94%A8%E6%88%B7%EF%BC%8C%E7%9B%B4%E6%8E%A5%E5%90%91%20brightness%20%E5%86%99%E5%85%A5%E6%95%B0%E5%80%BC%E5%8D%B3%E5%8F%AF%E8%B0%83%E8%8A%82%E4%BA%AE%E5%BA%A6%EF%BC%9A%20echo,50%20%3E%20brightness%20%E6%B3%A8%E6%84%8F%E8%8C%83%E5%9B%B4%E4%B8%BA%20%5B0-max_brightness%5D%20%EF%BC%8C%E9%9D%9E%E6%B3%95%E8%8C%83%E5%9B%B4%E4%B8%8D%E8%83%BD%E6%89%A7%E8%A1%8C%E6%88%90%E5%8A%9F%EF%BC%9A"></a></p>
+<p>也可以有其他图形化工具, </p>
+<h3 id="2-16-声音调节"><a href="#2-16-声音调节" class="headerlink" title="2.16 声音调节"></a>2.16 声音调节</h3><p>在安装了<code>alsa-utils</code>之后，可以通过alsamixer调用终端调节音量，这个比kde设置快一些</p>
+<h3 id="2-17-腾讯会议"><a href="#2-17-腾讯会议" class="headerlink" title="2.17 腾讯会议"></a>2.17 腾讯会议</h3><p>关于i3中的腾讯会议，有很多bug,这种动态堆叠窗口似乎并不适合在wm中使用。</p>
+<p>比方说出现了闪屏的问题，关掉picom才解决</p>
+<p>再比方说动画卡顿的问题，这个我不清楚是不是我的网络问题，感觉uos的腾讯会议做的都好一些，这个在plasma下依然有问题</p>
+<h2 id="3-我与代理那些事"><a href="#3-我与代理那些事" class="headerlink" title="3. 我与代理那些事"></a>3. 我与代理那些事</h2><h3 id="3-1-如何同步时间："><a href="#3-1-如何同步时间：" class="headerlink" title="3.1 如何同步时间："></a>3.1 如何同步时间：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">❯ timedatectl                                                                             ─╯</span><br><span class="line">               Local time: 四 2023-02-23 10:04:17 CST</span><br><span class="line">           Universal time: 四 2023-02-23 02:04:17 UTC</span><br><span class="line">                 RTC time: 四 2023-02-23 02:04:18</span><br><span class="line">                Time zone: Asia/Shanghai (CST, +0800)</span><br><span class="line">System clock synchronized: no</span><br><span class="line">              NTP service: inactive</span><br><span class="line">          RTC <span class="keyword">in</span> <span class="built_in">local</span> TZ: no</span><br></pre></td></tr></table></figure>
+<p>no表示没有同步好时间</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">❯ systemctl restart systemd-timesyncd.service                                             ─╯</span><br><span class="line">==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ====</span><br><span class="line">重新启动“systemd-timesyncd.service”需要认证。Authenticating as: raccoon</span><br><span class="line">Password: </span><br><span class="line">==== AUTHENTICATION COMPLETE ====</span><br></pre></td></tr></table></figure>
+<p>重启服务即可</p>
+<p>好像不是完全可以解决问题</p>
+<p>万能的CSDN如是说:timedatectl set-local-rtc 1</p>
+<h3 id="3-2-v2raya"><a href="#3-2-v2raya" class="headerlink" title="3.2 v2raya"></a>3.2 v2raya</h3><p>telegram的老哥教教用法：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#首先要看/var/log/v2raya下面的log</span></span><br><span class="line">然后执行命令</span><br><span class="line">journalctl -fu v2raya -n 100 <span class="comment">#查看执行记录</span></span><br></pre></td></tr></table></figure>
+<p><img src="/home/raccoon/Pictures/6394C08FB4BAB6DA011FBA235B4B63CE.png" width=70%></p>
+<p>以上报错信息的解决方案是：</p>
+<p>大哥说我-Syu了，让我换v2raya-git，装好之后再换</p>
+<p>但是机房电脑跑不起来，太可恶了</p>
+<p>是否可能是没有安装v2ray内核？</p>
+<h3 id="3-3-ip和转发"><a href="#3-3-ip和转发" class="headerlink" title="3.3 ip和转发"></a>3.3 ip和转发</h3><p>问题背景：</p>
+<ol>
+<li><p>在注册chatgpt时，识别依然为南京ip</p>
+</li>
+<li><p>在校外使用easyconnect访问校园网时，git ssh无法使用但是git http可以使用的问题</p>
+</li>
+</ol>
+<p>这涉及到根本的两件事情，</p>
+<ol>
+<li><p>访问外网和ip在国外是两码事</p>
+</li>
+<li><p>能访问校园服务器和ssh是两码事</p>
+</li>
+</ol>
+<p>总结起来，第一，如果要使用chatcpt, 就把白名单模式改成不进行分流</p>
+<p>第二，如果要用ssh,就关掉所有代理</p>
+<h2 id="4-关于键盘"><a href="#4-关于键盘" class="headerlink" title="4. 关于键盘"></a>4. 关于键盘</h2><h3 id="4-1-xmodmap"><a href="#4-1-xmodmap" class="headerlink" title="4.1 xmodmap"></a>4.1 xmodmap</h3><h3 id="4-2-magickeyboard"><a href="#4-2-magickeyboard" class="headerlink" title="4.2 magickeyboard"></a>4.2 magickeyboard</h3><p>在使用magickeyboard中遇到了一些问题</p>
+<p>一个是左下角不做ctrl真的反人类</p>
+<p>还有一个是，经典的标准功能键问题</p>
+<p>参考一篇博客，实现更改fn模式，并永久写入（即sys中的文件在开机阶段就更改）<br><a target="_blank" rel="noopener" href="https://www.hashbangcode.com/article/turning-or-fn-mode-ubuntu-linux">https://www.hashbangcode.com/article/turning-or-fn-mode-ubuntu-linux</a></p>
+<p>还有就是，打开开关就可以瞬间被arch连接检测到，很合理</p>
+<h3 id="4-3-fcitx5"><a href="#4-3-fcitx5" class="headerlink" title="4.3 fcitx5"></a>4.3 fcitx5</h3><p>fcitx5如果存在zh和拼音两种选项时，zh会影响xmodmap,具体表现为：终端只有在拼音状态下caps键才能发挥esc作用</p>
+<p>方法是去除zh,使用en和拼音</p>
+<h2 id="BUG"><a href="#BUG" class="headerlink" title="BUG"></a>BUG</h2><p>qq和i3老会闪退，有点烦，待会试试第三方qq</p>
+<p>机房的x桌面没装好，相互关联的信息有待学习</p>
+<h4 id="关于显示器"><a href="#关于显示器" class="headerlink" title="关于显示器."></a>关于显示器.</h4><p>目前显示器在我已知范围内有如下bug和现象</p>
+<p>第一是, 在xrandr显示信息时, 有时显示60+30HZ, 有时显示29HZ</p>
+<p>显示29HZ的时候, 大概率是接口有问题, 因为windows也是这样</p>
+<p>在显示配置中,我启用了disp脚本,用xrandr</p>
+<p>disp all 和 aoc时,会导致两边黑屏,黑暗中摸索命令大多是没有执行的</p>
+<p>一方面可能是输入法中文</p>
+<p>另一方面从查阅bash记录来讲, 很有可能是没有敲进去,那怎么回事呢?我明明是新建了工作区的</p>
+<p>ssh能否给我答案</p>
+<p>还有时候,disp aoc没反应,或者xrandr检测不到</p>
+<p>开机如果已经启动了显示器, 会桌面渲染卡顿(因为键盘敲reboot是可以响应的)</p>
+<p>检测不到显示器的arandr图形化报错:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">XRandR失败:</span><br><span class="line">XRandR returned error code 1: b<span class="string">&#x27;xrandr:cannot find mode None</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure><br>最新结论:<br>xlayoutdisplay是可以进行3840 60hz的<br>只是dpi有问题</p>
+<p><img src="/home/raccoon/.config/Typora/typora-user-images/image-20230302141214131.png" alt="image-20230302141214131"></p>
+<p>比如这里就可以成功显示4k60hz，动画有点卡，不知道换成低分辨率和低dpi是否会好一些</p>
+<p>kde settings能挑出来60hz</p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="//TODO"></a>//TODO</h2><p>neovim</p>
+<p>第三方qq：icalingua++</p>
+<p>polybar简洁模式（如何显示系统图标</p>
+<p>看看tray报错</p>
+<p><img src="/home/raccoon/.config/Typora/typora-user-images/image-20230303230551104.png" alt="image-20230303230551104"></p>
+<p>图标终端</p>
+<p>截图schot</p>
+<p>firefox起始页面，vim插件</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/k-vernooy/dotfiles">https://github.com/k-vernooy/dotfiles</a></p>
+<p>qt配色和ixdm配色（thechw佬和洋芋佬）<br>thecw笔记：<br>42：23 主题 lxapperance<br>ranger有专门视频thecw<br>洋芋40：20<br>neovim视频<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1QL4y147VD/?spm_id_from=333.337.search-card.all.click&amp;vd_source=9fc1aeab20d64d4315c451b9c18d30d8">https://www.bilibili.com/video/BV1QL4y147VD/?spm_id_from=333.337.search-card.all.click&amp;vd_source=9fc1aeab20d64d4315c451b9c18d30d8</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14a41147ap/?spm_id_from=333.337.search-card.all.click&amp;vd_source=9fc1aeab20d64d4315c451b9c18d30d8">https://www.bilibili.com/video/BV14a41147ap/?spm_id_from=333.337.search-card.all.click&amp;vd_source=9fc1aeab20d64d4315c451b9c18d30d8</a></p>
+<p>ranger终端文件管理</p>
+<p>xmodmap,thechw佬，重新尝试清除修饰键</p>
+<p>dpi更换，显示更模糊但想要更好的动画</p>
+<p>dunst主题</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://raccoon.love">raccoon</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://raccoon.love/c1318ce9/">https://raccoon.love/c1318ce9/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://raccoon.love" target="_blank">raccoon的博客小站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/no-tag/">no_tag</a></div><div class="post_share"><div class="social-share" data-image="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/avatar.JPG" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/image-20240215000806621.png" target="_blank"><img class="post-qr-code-img" src="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/image-20240215000806621.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/image-20240215000747397.png" target="_blank"><img class="post-qr-code-img" src="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/image-20240215000747397.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/7d445da3/" title="Small-Tips"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Small-Tips</div></div></a></div><div class="next-post pull-right"><a href="/23f29162/" title="Karabiner"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Karabiner</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/76b63a54/" title="喜报!我学会电风扇了！"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-21</div><div class="title">喜报!我学会电风扇了！</div></div></a></div><div><a href="/ba94749b/" title="记南京最多人的一次聚会"><img class="cover" src="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/default/43a4ec76ac6a5934f5c1941df8d37109.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-16</div><div class="title">记南京最多人的一次聚会</div></div></a></div><div><a href="/1850b336/" title="信息技术教资24上回忆"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-16</div><div class="title">信息技术教资24上回忆</div></div></a></div><div><a href="/baf287e3/" title="分享两段文案"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-21</div><div class="title">分享两段文案</div></div></a></div><div><a href="/526357b2/" title="大局当下，寻找当代大学生的人生确定性"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-17</div><div class="title">大局当下，寻找当代大学生的人生确定性</div></div></a></div><div><a href="/90b93c6b/" title="悠悠教学-运双球"><img class="cover" src="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/default/202403232152479.gif" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-19</div><div class="title">悠悠教学-运双球</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Twikoo</span><span id="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ArchLinux"><span class="toc-number">1.</span> <span class="toc-text">ArchLinux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.</span> <span class="toc-text">一些基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-ArchLinux%E5%AE%89%E8%A3%85"><span class="toc-number">1.3.</span> <span class="toc-text">1. ArchLinux安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-i3wm%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE"><span class="toc-number">1.4.</span> <span class="toc-text">2. i3wm安装配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%98%BE%E7%A4%BA%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.1.</span> <span class="toc-text">2.1 显示管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%A7%A6%E6%8E%A7%E6%9D%BF%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.2 触控板管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E7%AA%97%E5%8F%A3%E5%A4%96%E8%A7%82"><span class="toc-number">1.4.3.</span> <span class="toc-text">2.3 窗口外观</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%B9%E6%A1%86"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">边框:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2%EF%BC%9A"><span class="toc-number">1.4.3.2.</span> <span class="toc-text">颜色：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E8%AE%BE%E7%BD%AE%E5%9B%BA%E5%AE%9A%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="toc-number">1.4.4.</span> <span class="toc-text">2.4 设置固定工作区:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E9%80%89%E5%AE%9A%E6%B5%AE%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-number">1.4.5.</span> <span class="toc-text">2.5 选定浮动窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-%E8%AE%BE%E5%AE%9A%E7%AA%97%E5%8F%A3%E9%BB%98%E8%AE%A4%E5%B8%83%E5%B1%80"><span class="toc-number">1.4.6.</span> <span class="toc-text">2.6 设定窗口默认布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#i3-layout"><span class="toc-number">1.4.6.1.</span> <span class="toc-text">i3-layout</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-rofi"><span class="toc-number">1.4.7.</span> <span class="toc-text">2.7 rofi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-8-polybar"><span class="toc-number">1.4.8.</span> <span class="toc-text">2.8 polybar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-9-alacritty"><span class="toc-number">1.4.9.</span> <span class="toc-text">2.9 alacritty</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-10-flameshot"><span class="toc-number">1.4.10.</span> <span class="toc-text">2.10 flameshot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-11-picom"><span class="toc-number">1.4.11.</span> <span class="toc-text">2.11 picom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-12-feh"><span class="toc-number">1.4.12.</span> <span class="toc-text">2.12 feh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-13-%E6%97%A0%E9%81%93%E8%AF%8D%E5%85%B8"><span class="toc-number">1.4.13.</span> <span class="toc-text">2.13 无道词典</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-14-%E5%88%86%E5%8C%BAgparted"><span class="toc-number">1.4.14.</span> <span class="toc-text">2.14 分区gparted</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-15-backlight%E8%83%8C%E5%85%89%E8%B0%83%E6%95%B4"><span class="toc-number">1.4.15.</span> <span class="toc-text">2.15 backlight背光调整</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-16-%E5%A3%B0%E9%9F%B3%E8%B0%83%E8%8A%82"><span class="toc-number">1.4.16.</span> <span class="toc-text">2.16 声音调节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-17-%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE"><span class="toc-number">1.4.17.</span> <span class="toc-text">2.17 腾讯会议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%88%91%E4%B8%8E%E4%BB%A3%E7%90%86%E9%82%A3%E4%BA%9B%E4%BA%8B"><span class="toc-number">1.5.</span> <span class="toc-text">3. 我与代理那些事</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%A6%82%E4%BD%95%E5%90%8C%E6%AD%A5%E6%97%B6%E9%97%B4%EF%BC%9A"><span class="toc-number">1.5.1.</span> <span class="toc-text">3.1 如何同步时间：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-v2raya"><span class="toc-number">1.5.2.</span> <span class="toc-text">3.2 v2raya</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-ip%E5%92%8C%E8%BD%AC%E5%8F%91"><span class="toc-number">1.5.3.</span> <span class="toc-text">3.3 ip和转发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%85%B3%E4%BA%8E%E9%94%AE%E7%9B%98"><span class="toc-number">1.6.</span> <span class="toc-text">4. 关于键盘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-xmodmap"><span class="toc-number">1.6.1.</span> <span class="toc-text">4.1 xmodmap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-magickeyboard"><span class="toc-number">1.6.2.</span> <span class="toc-text">4.2 magickeyboard</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-fcitx5"><span class="toc-number">1.6.3.</span> <span class="toc-text">4.3 fcitx5</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BUG"><span class="toc-number">1.7.</span> <span class="toc-text">BUG</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%98%BE%E7%A4%BA%E5%99%A8"><span class="toc-number">1.7.0.1.</span> <span class="toc-text">关于显示器.</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TODO"><span class="toc-number">1.8.</span> <span class="toc-text">&#x2F;&#x2F;TODO</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By raccoon</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://netlify.raccoon.love/.netlify/functions/twikoo',
+      region: 'ap-hongkong',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.31/dist/twikoo.all.min.js').then(init)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://netlify.raccoon.love/.netlify/functions/twikoo',
+      region: 'ap-hongkong',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+      
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'mJmKkymoLYEv62f0tVJHQGWb-gzGzoHsz',
+      appKey: 'z6GsFO5fwhcTgDEsw4yHHIN7',
+      avatar: 'mm',
+      serverURLs: 'https://mjmkkymo.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, {"meta":["nick","mail"],"placeholder":"Twikoo不能用再来用这个<br>快来评论吧!昵称默认Anonymous，留下邮箱可以收到回复提示邮件"}))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Twikoo' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><!-- hexo injector body_end end --></body></html>

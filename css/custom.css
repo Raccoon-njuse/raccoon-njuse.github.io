@@ -1,0 +1,232 @@
+#article-container h1:before,
+#article-container h2:before,
+#article-container h3:before,
+#article-container h4:before,
+#article-container h5:before,
+#article-container h6:before,
+#post .post-outdate-notice:before,
+.fontawesomeIcon,
+.note:not(.no-icon)::before,
+hr:before {
+    display: inline-block;
+    font-weight: 600;
+    font-style: normal;
+    font-variant: normal;
+    font-family: 'Font Awesome 5 Free';
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased
+}
+#article-container h1:before,
+#article-container h2:before,
+#article-container h3:before,
+#article-container h4:before,
+#article-container h5:before,
+#article-container h6:before {
+    position: absolute;
+    color: #f47466;
+    /* 回形针 */
+    /* content: '\f0c1';  */
+    line-height: 1;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    /* 若要使用风车效果，请去掉下面的注释 */
+    content: '\f863';
+    animation: avatar_turn_around 1s linear infinite; 
+}
+
+/* 标题目录相关
+#article-container {
+    counter-reset: h1counter 0 h2counter 0 h3counter 0 h4counter 0 h5counter 0 h6counter 0 !important;
+}
+#article-container h1 {
+    counter-reset: h2counter !important;
+}
+#article-container h2 {
+    counter-reset: h3counter !important;
+}
+#article-container h3 {
+    counter-reset: h4counter !important;
+}
+#article-container h4 {
+    counter-reset: h5counter !important;
+}
+#article-container h5 {
+    counter-reset: h6counter !important;
+}
+
+#article-container h1:before {
+    counter-increment: h1counter;
+    content: "\f863 " counter(h1counter) ". " !important;
+}
+#article-container h2:before {
+    counter-increment: h2counter;
+    content: "\f863 " counter(h1counter) "." counter(h2counter) ".  " !important;
+}
+#article-container h3:before {
+    counter-increment: h3counter;
+    content: "\f863 " counter(h1counter) "." counter(h2counter) "." counter(h3counter) ".  " !important;
+}
+#article-container h4:before {
+    counter-increment: h4counter;
+    content: "\f863 " counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".  " !important;
+}
+#article-container h5:before {
+    counter-increment: h5counter;
+    content: "\f863 " counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) ".  " !important;
+}
+#article-container h6:before {
+    counter-increment: h6counter;
+    content: "\f863 " counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) ".  " !important;
+} */
+#article-container h1 {
+    padding-left: 1.4rem
+}
+
+#article-container h1 code {
+    font-size: 1rem
+}
+
+#article-container h1:before {
+    margin-left: -1.3rem;
+    top: calc(50% - .5rem);
+    font-size: 1rem
+}
+
+#article-container h1:hover {
+    padding-left: 1.6rem
+}
+
+#article-container h2 {
+    padding-left: 1.3rem
+}
+
+#article-container h2 code {
+    font-size: .9rem
+}
+
+#article-container h2:before {
+    margin-left: -1.4rem;
+    top: calc(50% - .45rem);
+    font-size: .9rem
+}
+
+#article-container h2:hover {
+    padding-left: 1.5rem
+}
+
+#article-container h3 {
+    padding-left: 1.2rem
+}
+
+#article-container h3 code {
+    font-size: .8rem;
+    top: calc(50% - .4rem);
+
+}
+
+#article-container h3:before {
+    margin-left: -1.2rem;
+    top: calc(50% - .4rem);
+    font-size: .8rem
+}
+
+#article-container h3:hover {
+    padding-left: 1.4rem
+}
+
+#article-container h4 {
+    padding-left: 1.1rem
+}
+
+#article-container h4 code {
+    font-size: .7rem
+}
+
+#article-container h4:before {
+    margin-left: -1rem;
+    top: calc(50% - .35rem);
+    font-size: .7rem
+}
+
+#article-container h4:hover {
+    padding-left: 1.3rem
+}
+
+#article-container h5 {
+    padding-left: 1rem
+}
+
+#article-container h5 code {
+    font-size: .6rem
+}
+
+#article-container h5:before {
+    margin-left: -.8rem;
+    top: calc(50% - .3rem);
+    font-size: .6rem
+}
+
+#article-container h5:hover {
+    padding-left: 1.2rem
+}
+
+#article-container h6 {
+    padding-left: 1rem
+}
+
+#article-container h6 code {
+    font-size: .6rem
+}
+
+#article-container h6:before {
+    margin-left: -.8rem;
+    top: calc(50% - .3rem);
+    font-size: .6rem
+}
+
+#article-container h6:hover {
+    padding-left: 1.2rem
+}
+
+
+.category-lists ul {
+  list-style: none;
+}
+
+.category-lists ul li {
+  font-size: large;
+  position: relative;
+  padding: 0.12em 0.4em 0.12em 1.4em;
+}
+
+.category-lists ul li:hover:before {
+  border-color: var(--pseudo-hover);
+}
+
+.category-lists ul li:before {
+  position: absolute;
+  color: #0db582;
+  top: 0.1em;
+  left: 0;
+  width: 0.43em;
+  height: 0.43em;
+  border: 0em;
+  border-radius: 0em;
+  background: transparent;
+  display: inline-block;
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+  font-family: 'Font Awesome 5 Free';
+  text-rendering: auto;
+  content: "\f07b";
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}

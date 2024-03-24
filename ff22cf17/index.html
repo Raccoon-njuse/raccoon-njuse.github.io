@@ -1,0 +1,323 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>开题报告 | raccoon的博客小站</title><meta name="author" content="raccoon"><meta name="copyright" content="raccoon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="选题结合边缘计算的智能网联机器人系统 Intelligent networked robot system combined with edge computing 研究背景及意义1. 背景在21世纪初，自主导航技术成为学术研究和行业关注的焦点，特别是在无人车辆、无人潜艇和无人飞行器等领域。同步定位与建图（SLAM）技术作为实现自主导航的核心，取得了广泛应用。然而，传统的SLAM算法依赖于机器人携">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开题报告">
+<meta property="og:url" content="https://raccoon.love/ff22cf17/index.html">
+<meta property="og:site_name" content="raccoon的博客小站">
+<meta property="og:description" content="选题结合边缘计算的智能网联机器人系统 Intelligent networked robot system combined with edge computing 研究背景及意义1. 背景在21世纪初，自主导航技术成为学术研究和行业关注的焦点，特别是在无人车辆、无人潜艇和无人飞行器等领域。同步定位与建图（SLAM）技术作为实现自主导航的核心，取得了广泛应用。然而，传统的SLAM算法依赖于机器人携">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/avatar.JPG">
+<meta property="article:published_time" content="2024-02-12T10:23:43.000Z">
+<meta property="article:modified_time" content="2024-02-20T15:56:22.000Z">
+<meta property="article:author" content="raccoon">
+<meta property="article:tag" content="edgex">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/avatar.JPG"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://raccoon.love/ff22cf17/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":100,"position":"top","messagePrev":"距离上次更新已经过去了","messageNext":"天，文章所述内容可能已经发生变化，请留意"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '开题报告',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-02-20 23:56:22'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.css"><link rel="stylesheet" href="/css/custom.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/avatar.JPG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">54</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">24</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-regular fa-address-card"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw far fa-compass"></i><span> 专栏</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/index/journey/"><i class="fa-fw fas fa-earth-americas"></i><span> 旅程</span></a></li><li><a class="site-page child" href="/index/yoyo/"><span> 🪀 悠悠</span></a></li><li><a class="site-page child" href="/index/edu/"><i class="fa-fw fas fa-graduation-cap"></i><span> 支教</span></a></li><li><a class="site-page child" href="/index/tech/"><i class="fa-fw fab fa-ubuntu"></i><span> 纯纯寄术流</span></a></li><li><a class="site-page child" href="/index/letter"><i class="fa-fw fas fa-envelope"></i><span> 雲笺信语</span></a></li><li><a class="site-page child" href="/index/other"><i class="fa-fw fas fa-link"></i><span> 其他</span></a></li><li><a class="site-page child" href="/index/private"><i class="fa-fw fas fa-lock"></i><span> 私密</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347),linear-gradient(210deg, #ff9a9e, #fad0c4, #fad0c4),linear-gradient(180deg, #232526, #414345, #5e6062),linear-gradient(165deg, #56ab2f, #a8e063, #76ba1b),linear-gradient(150deg, #accbee, #e7f0fd, #ffffff),linear-gradient(135deg, #e6e9af, #e8c37e, #f4d03f),linear-gradient(120deg, #DA22FF, #9733EE, #65799B, #5E2563),linear-gradient(90deg, #0f2027, #203a43, #2c5364),linear-gradient(75deg, #9be15d, #00e3ae, #88d8b0),linear-gradient(60deg, #ff7e5f, #feb47b, #ff7e5f, #fcb045),linear-gradient(45deg, #2e8b57, #48d1cc, #00ced1, #7fffd4),linear-gradient(165deg, #3e5151, #decba4),linear-gradient(150deg, #2E3192, #1BFFFF),linear-gradient(135deg, #ee9ca7, #ffdde1),linear-gradient(120deg, #FF5F6D, #FFC371),linear-gradient(105deg, #000428, #004e92),linear-gradient(90deg, #D9AFD9, #97D9E1),linear-gradient(75deg, #0f0c29, #302b63, #24243e),linear-gradient(60deg, #C9FFBF, #FFAFBD, #FFF),linear-gradient(45deg, #FFB75E, #ED8F03),linear-gradient(30deg, #5f2c82, #49a09d)"><nav id="nav"><span id="blog-info"><a href="/" title="raccoon的博客小站"><span class="site-name">raccoon的博客小站</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-regular fa-address-card"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw far fa-compass"></i><span> 专栏</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/index/journey/"><i class="fa-fw fas fa-earth-americas"></i><span> 旅程</span></a></li><li><a class="site-page child" href="/index/yoyo/"><span> 🪀 悠悠</span></a></li><li><a class="site-page child" href="/index/edu/"><i class="fa-fw fas fa-graduation-cap"></i><span> 支教</span></a></li><li><a class="site-page child" href="/index/tech/"><i class="fa-fw fab fa-ubuntu"></i><span> 纯纯寄术流</span></a></li><li><a class="site-page child" href="/index/letter"><i class="fa-fw fas fa-envelope"></i><span> 雲笺信语</span></a></li><li><a class="site-page child" href="/index/other"><i class="fa-fw fas fa-link"></i><span> 其他</span></a></li><li><a class="site-page child" href="/index/private"><i class="fa-fw fas fa-lock"></i><span> 私密</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">开题报告</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-02-12T10:23:43.000Z" title="发表于 2024-02-12 18:23:43">2024-02-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-20T15:56:22.000Z" title="更新于 2024-02-20 23:56:22">2024-02-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BA%AF%E7%BA%AF%E5%AF%84%E6%9C%AF%E6%B5%81/">纯纯寄术流</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BA%AF%E7%BA%AF%E5%AF%84%E6%9C%AF%E6%B5%81/%E6%AF%95%E8%AE%BE/">毕设</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="开题报告"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="选题"><a href="#选题" class="headerlink" title="选题"></a>选题</h1><p>结合边缘计算的智能网联机器人系统</p>
+<p>Intelligent networked robot system combined with edge computing</p>
+<h1 id="研究背景及意义"><a href="#研究背景及意义" class="headerlink" title="研究背景及意义"></a>研究背景及意义</h1><h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h3><p>在21世纪初，自主导航技术成为学术研究和行业关注的焦点，特别是在无人车辆、无人潜艇和无人飞行器等领域。同步定位与建图（SLAM）技术作为实现自主导航的核心，取得了广泛应用。然而，传统的SLAM算法依赖于机器人携带的有限移动计算资源，这限制了实时性能的提升。随着云计算技术的兴起，研究者们将目光投向了云计算在机器人领域的应用，试图解决SLAM过程中的计算不足和负担问题。</p>
+<h3 id="2-云计算在机器人领域的应用"><a href="#2-云计算在机器人领域的应用" class="headerlink" title="2. 云计算在机器人领域的应用"></a>2. 云计算在机器人领域的应用</h3><p>云计算技术的引入为机器人系统带来了新的机遇。云机器人的概念首次由Kuffner提出，将云计算技术与机器人技术相结合。随后，各种云平台和服务，如DaVinci、Rapyuta、RoboEarth、sensor-cloud等，将繁重的计算工作从机器人转移到云中的安全计算环境中。这种架构的提出已在仿人机器人、水下机器人、工业机器人等领域取得实际应用，证明了云机器人的实用性和有效性。</p>
+<h3 id="3-边缘计算的兴起"><a href="#3-边缘计算的兴起" class="headerlink" title="3. 边缘计算的兴起"></a>3. 边缘计算的兴起</h3><p>然而，随着智能机器人和物联网技术的迅速发展，对于更低延迟、更高效能的解决方案的需求不断增加。传统的云计算技术难以满足对海量数据存储和计算的实时要求。边缘计算以其无中心、广泛分布、低延迟、低功耗的特点，成为解决当前工业智能化需求的理想选择。在工业机器人领域，特别是对于网络传输和计算能力要求更高的智能应用系统，边缘计算技术变得尤为重要。</p>
+<h3 id="4-SLAM的多机器人协作挑战"><a href="#4-SLAM的多机器人协作挑战" class="headerlink" title="4. SLAM的多机器人协作挑战"></a>4. SLAM的多机器人协作挑战</h3><p>随着机器人系统互联度的提高，SLAM技术在多机器人协作中变得愈发重要。然而，多机器人协作SLAM面临着通信和计算瓶颈的挑战。在传统解决方案中，依赖强大的云服务器作为外部计算提供商。然而，由于机器人与云之间不稳定的远程连接，以及大量的通信开销，这种方式可能无法实际部署。</p>
+<h3 id="5-边缘-云计算机器人系统对slam问题解决的意义"><a href="#5-边缘-云计算机器人系统对slam问题解决的意义" class="headerlink" title="5. 边缘-云计算机器人系统对slam问题解决的意义"></a>5. 边缘-云计算机器人系统对slam问题解决的意义</h3><ul>
+<li><strong>实时性能提升：</strong> 边缘计算的引入能够将计算任务从机器人移动平台转移到边缘服务器，从而提高SLAM算法的实时性能。</li>
+<li><strong>资源优化：</strong> 边缘计算架构通过合理协调机器人与边缘节点之间的计算资源，实现了资源的优化和任务的协同处理。</li>
+<li><strong>降低延迟：</strong> 边缘计算的低延迟特性使得机器人能够更快速地响应环境变化，尤其在需要快速决策的场景中表现出色。</li>
+<li><strong>多机器人协作：</strong> 边缘-云计算结合的平台为多机器人协作提供了更强大的支持，通过协调机器人之间的数据流和任务分配，优化整个系统性能。</li>
+<li><strong>适应性和灵活性：</strong> 边缘-云计算平台的设计使得机器人系统更加适应不同环境和任务，同时提供灵活性以应对不同工作负载和计算需求。</li>
+</ul>
+<h1 id="国内外研究现状"><a href="#国内外研究现状" class="headerlink" title="国内外研究现状"></a>国内外研究现状</h1><h2 id="自主分布式机器人系统关键技术和概念"><a href="#自主分布式机器人系统关键技术和概念" class="headerlink" title="自主分布式机器人系统关键技术和概念"></a>自主分布式机器人系统关键技术和概念</h2><h3 id="A-ROS-2-和-DDS"><a href="#A-ROS-2-和-DDS" class="headerlink" title="A. ROS 2 和 DDS"></a>A. ROS 2 和 DDS</h3><p>机器人操作系统（ROS）是自主机器人系统的事实标准。ROS 2是ROS的改进版本，强调分布、抽象、异步和模块化。这与分散的机器人系统的新现实密切相关，需要适应车队、自然分布在边缘的计算架构。ROS 2的设计也考虑了内置安全性、嵌入式系统、多样化网络条件和实时计算的能力。在边缘-云连续体中，对内置安全性、异构计算硬件支持的需求增加，需要考虑交替网络条件。</p>
+<p>ROS 2系统由多个分布式进程或节点组成，通过主题（发布/订阅系统）、服务、动作进行通信，并提供抽象层。通信中间件依赖于行业标准DDS协议，但在某些架构中可能需要额外的通信中间件或数据流可能性，因为一些数据密集型传感器提供的原始数据可能不适合直接从边缘卸载到云端。</p>
+<h3 id="B-容器化"><a href="#B-容器化" class="headerlink" title="B. 容器化"></a>B. 容器化</h3><p>虚拟化技术是云计算的核心基础，容器技术成为轻量级虚拟化解决方案的代表。Docker和Kubernetes在容器技术和云计算方面发挥了重要作用。它们提供了构建、部署和运行容器的平台和编排工具。容器化有助于提高灵活性、可移植性和资源利用率，为分布式机器人系统提供更强大的部署和扩展性。</p>
+<h3 id="C-计算卸载"><a href="#C-计算卸载" class="headerlink" title="C. 计算卸载"></a>C. 计算卸载</h3><p>云机器人框架必须允许机器人的远程操作、在云中运行自主操作所需的部分计算，或同时支持两者。计算卸载是云机器人研究的主要方向之一。标准化的抽象计算分布范式是多接入边缘计算（MEC）的标准化，建立在欧洲电信标准协会（ETSI）提出的多接入边缘计算的基础上。计算卸载编排中的关键参数包括实时延迟和带宽。</p>
+<h3 id="D-安全"><a href="#D-安全" class="headerlink" title="D. 安全"></a>D. 安全</h3><p>SROS2提供一组工具和库，用于为ROS 2实体提供安全性、身份验证和访问控制。DDS安全规范在通信级别实现ROS 2的安全工具。在边缘-云环境中，内置安全性和弹性对于交替网络条件至关重要。分布式账本技术（DLT）也为安全性提供了解决方案，通过提供不可变的分类账和去中心化的系统，降低对第三方的信任。</p>
+<h3 id="E-分布式账本技术"><a href="#E-分布式账本技术" class="headerlink" title="E. 分布式账本技术"></a>E. 分布式账本技术</h3><p>共识在分布式系统中是一个基本问题，分布式账本技术（DLT）通过提供不可变的分类账解决了这个问题。DLT在分布式机器人系统中发挥着关键作用，提供去中心化的解决方案和安全通信通道。以太坊、Hyperledger Fabric和IOTA等区块链解决方案已经在机器人用例中应用，新技术如使用有向无环图（DAG）架构的解决方案也在崭露头角。</p>
+<h2 id="多机器人-SLAM-处理和边缘计算"><a href="#多机器人-SLAM-处理和边缘计算" class="headerlink" title="多机器人 SLAM 处理和边缘计算"></a>多机器人 SLAM 处理和边缘计算</h2><h3 id="A-多机器人-SLAM"><a href="#A-多机器人-SLAM" class="headerlink" title="A. 多机器人 SLAM"></a>A. 多机器人 SLAM</h3><p>多机器人 SLAM 扩展了单机器人 SLAM，通过地图融合管理一组机器人执行 SLAM，构建全局地图。目前的云解决方案存在通信和计算瓶颈，尤其是在网络不稳定的情况下。本地计算成本和远程互联网传输是瓶颈，特别是对于多机器人 SLAM 的实时要求。</p>
+<h3 id="B-最先进技术的性能影响"><a href="#B-最先进技术的性能影响" class="headerlink" title="B. 最先进技术的性能影响"></a>B. 最先进技术的性能影响</h3><p>当前基于云的多机器人 SLAM 解决方案存在通信和计算瓶颈。云服务的总延迟对信道切换敏感，而本地计算成本占据了大部分时间。通信侧的成本差异和本地SLAM计算的资源消耗是主要问题。</p>
+<h3 id="C-边缘计算的机遇和挑战"><a href="#C-边缘计算的机遇和挑战" class="headerlink" title="C. 边缘计算的机遇和挑战"></a>C. 边缘计算的机遇和挑战</h3><p>边缘计算提供了降低计算压力和传输延迟的机会，重新设计多机器人地图融合管道。然而，边缘服务器的松散耦合和不均匀性需要精心设计通信协议。网络动态和边缘服务器之间的负载平衡也是需要考虑的挑战。整体上，边缘计算为多机器人 SLAM 处理提供了更高效的解决方案，减少了对云端传输的依赖，降低了延迟，并提升了性能。然而，需要注意边缘服务器之间的通信协议设计和负载平衡，以确保系统的稳定性和可靠性。</p>
+<h1 id="主要研究或解决的问题和拟采用的方法"><a href="#主要研究或解决的问题和拟采用的方法" class="headerlink" title="主要研究或解决的问题和拟采用的方法"></a>主要研究或解决的问题和拟采用的方法</h1><p>主要研究或解决的问题是: 在传统的SLAM算法中，由于计算量庞大，移动机器人很难同时实现实时性和精确性。为了解决这一问题，提出了一种基于边缘-云协同计算的SLAM算法。该算法利用边缘计算进行本地地图估计，利用云计算进行全局地图估计。边缘使用平方根无迹卡尔曼滤波器（SR-UKF）进行快速SLAM计算，而云使用分布式平方根无迹粒子滤波器（DSR-UPF）进行流式计算以提高准确性。通过充分发挥边缘和云计算的优势，该算法增强了估计准确性，减少了执行时间，并提高了移动机器人的环境适应能力。</p>
+<p>拟采用的方法包括：</p>
+<ol>
+<li>边缘包括数据采集、消息客户端、本地SLAM计算、边缘-云融合和本地存储等模块，用于实现实时SLAM计算和本地地图估计。</li>
+<li>云执行分布式平方根无迹粒子滤波器（DSR-UPF）进行全局地图建模，通过流式计算提高准确性，同时使用分布式思想和方法进行实时数据处理。</li>
+<li>论文提出的SLAM算法不仅确保实时性，还通过边缘-云协同架构提高了准确性和效率。云计算框架充分利用其计算能力来改善执行性能，通过分布式平方根无迹粒子滤波器（DSR-UPF）提高准确性，边缘实时构建本地地图以满足实时要求。</li>
+<li>可视化方法，对机器人各方面数据进行展示，形成用户友好的高可用系统。</li>
+</ol>
+<h1 id="工作进度计划"><a href="#工作进度计划" class="headerlink" title="工作进度计划"></a>工作进度计划</h1><ul>
+<li><p>文献及原理（论文开题3.15前）：研究文献，深入了解SLAM算法、边缘计算和云计算的相关知识和原理。准备实验所需材料和工具。生成过程文档，叙述具体需要做的框架。</p>
+</li>
+<li><p>环境准备（论文开题3.15前）：搭建实验环境，包括edgex平台和相关工具的配置和安装，确保系统正常运行。</p>
+</li>
+<li><p>核心框架搭建（中期检查4.15前）：依据以下架构图和算法流程图，实现边缘计算和云计算的协同工作框架。同时，搭建可视化前端，展示机器人传感器相关数据。</p>
+<p><img src="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/default/image-20240313223634520.png" alt=""></p>
+<p><img src="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/default/image-20240313223702440.png" alt="image-20240313223702440"></p>
+</li>
+<li><p>算法测试（毕业答辩6.10前）：进行算法的初步测试，验证算法在实验环境中的正确性和可行性。主要测试SR-UKF和DSR-UPF的正确性。</p>
+</li>
+<li><p>算法调优（毕业答辩6.10前）：优化算法的性能，包括提高实时性、准确性和效率。尝试调整参数和算法结构以达到更好的效果。</p>
+</li>
+<li><p>集成测试（毕业答辩6.10前）：部署到相关软硬件平台，测试基于边缘云协同计算的SLAM过程是否正确运行。包含：边缘的数据采集，消息传输，边缘SLAM计算，本地地图存储；云的环路检测，云端分布式SLAM计算，粒子组合，粒子重采样。</p>
+</li>
+<li><p>实验验证（毕业答辩6.10前）：设计实验验证是否解决了SLAM问题，性能、准确性等是否得到提升。进行多次实验，对比不同参数设置下的实验结果，评估算法的性能优劣。记录和分析实验数据。对发现的问题予以解决</p>
+</li>
+<li><p>文档撰写（毕业答辩6.10前）：汇总过程文档，编写实验报告，总结实验过程和结果，撰写相关文档和论文，准备展示演示稿。</p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://raccoon.love">raccoon</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://raccoon.love/ff22cf17/">https://raccoon.love/ff22cf17/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://raccoon.love" target="_blank">raccoon的博客小站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/edgex/">edgex</a></div><div class="post_share"><div class="social-share" data-image="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/avatar.JPG" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/image-20240215000806621.png" target="_blank"><img class="post-qr-code-img" src="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/image-20240215000806621.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/image-20240215000747397.png" target="_blank"><img class="post-qr-code-img" src="https://picturebed-raccoon.oss-cn-hangzhou.aliyuncs.com/image-20240215000747397.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/ff22cf17-middle/" title="中期答辩"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">中期答辩</div></div></a></div><div class="next-post pull-right"><a href="/ff22cf17-papers/" title="开题报告"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">开题报告</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/ff22cf17-end/" title="结束论文"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-12</div><div class="title">结束论文</div></div></a></div><div><a href="/ff22cf17-middle/" title="中期答辩"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-12</div><div class="title">中期答辩</div></div></a></div><div><a href="/ff22cf17-papers/" title="开题报告"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-12</div><div class="title">开题报告</div></div></a></div><div><a href="/ff22cf17-slam/" title="slam"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-12</div><div class="title">slam</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div class="comment-switch"><span class="first-comment">Twikoo</span><span id="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%89%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">选题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF%E5%8F%8A%E6%84%8F%E4%B9%89"><span class="toc-number">2.</span> <span class="toc-text">研究背景及意义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%83%8C%E6%99%AF"><span class="toc-number">2.0.1.</span> <span class="toc-text">1. 背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BA%91%E8%AE%A1%E7%AE%97%E5%9C%A8%E6%9C%BA%E5%99%A8%E4%BA%BA%E9%A2%86%E5%9F%9F%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">2.0.2.</span> <span class="toc-text">2. 云计算在机器人领域的应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E7%9A%84%E5%85%B4%E8%B5%B7"><span class="toc-number">2.0.3.</span> <span class="toc-text">3. 边缘计算的兴起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-SLAM%E7%9A%84%E5%A4%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%8D%8F%E4%BD%9C%E6%8C%91%E6%88%98"><span class="toc-number">2.0.4.</span> <span class="toc-text">4. SLAM的多机器人协作挑战</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%BE%B9%E7%BC%98-%E4%BA%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%B3%BB%E7%BB%9F%E5%AF%B9slam%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-number">2.0.5.</span> <span class="toc-text">5. 边缘-云计算机器人系统对slam问题解决的意义</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BD%E5%86%85%E5%A4%96%E7%A0%94%E7%A9%B6%E7%8E%B0%E7%8A%B6"><span class="toc-number">3.</span> <span class="toc-text">国内外研究现状</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E4%B8%BB%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%B3%BB%E7%BB%9F%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E5%92%8C%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.</span> <span class="toc-text">自主分布式机器人系统关键技术和概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-ROS-2-%E5%92%8C-DDS"><span class="toc-number">3.1.1.</span> <span class="toc-text">A. ROS 2 和 DDS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B-%E5%AE%B9%E5%99%A8%E5%8C%96"><span class="toc-number">3.1.2.</span> <span class="toc-text">B. 容器化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E8%AE%A1%E7%AE%97%E5%8D%B8%E8%BD%BD"><span class="toc-number">3.1.3.</span> <span class="toc-text">C. 计算卸载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D-%E5%AE%89%E5%85%A8"><span class="toc-number">3.1.4.</span> <span class="toc-text">D. 安全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E-%E5%88%86%E5%B8%83%E5%BC%8F%E8%B4%A6%E6%9C%AC%E6%8A%80%E6%9C%AF"><span class="toc-number">3.1.5.</span> <span class="toc-text">E. 分布式账本技术</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E6%9C%BA%E5%99%A8%E4%BA%BA-SLAM-%E5%A4%84%E7%90%86%E5%92%8C%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97"><span class="toc-number">3.2.</span> <span class="toc-text">多机器人 SLAM 处理和边缘计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-%E5%A4%9A%E6%9C%BA%E5%99%A8%E4%BA%BA-SLAM"><span class="toc-number">3.2.1.</span> <span class="toc-text">A. 多机器人 SLAM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B-%E6%9C%80%E5%85%88%E8%BF%9B%E6%8A%80%E6%9C%AF%E7%9A%84%E6%80%A7%E8%83%BD%E5%BD%B1%E5%93%8D"><span class="toc-number">3.2.2.</span> <span class="toc-text">B. 最先进技术的性能影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97%E7%9A%84%E6%9C%BA%E9%81%87%E5%92%8C%E6%8C%91%E6%88%98"><span class="toc-number">3.2.3.</span> <span class="toc-text">C. 边缘计算的机遇和挑战</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E7%A0%94%E7%A9%B6%E6%88%96%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98%E5%92%8C%E6%8B%9F%E9%87%87%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">主要研究或解决的问题和拟采用的方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E8%BF%9B%E5%BA%A6%E8%AE%A1%E5%88%92"><span class="toc-number">5.</span> <span class="toc-text">工作进度计划</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By raccoon</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://netlify.raccoon.love/.netlify/functions/twikoo',
+      region: 'ap-hongkong',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.31/dist/twikoo.all.min.js').then(init)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://netlify.raccoon.love/.netlify/functions/twikoo',
+      region: 'ap-hongkong',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+      
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'mJmKkymoLYEv62f0tVJHQGWb-gzGzoHsz',
+      appKey: 'z6GsFO5fwhcTgDEsw4yHHIN7',
+      avatar: 'mm',
+      serverURLs: 'https://mjmkkymo.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, {"meta":["nick","mail"],"placeholder":"Twikoo不能用再来用这个<br>快来评论吧!昵称默认Anonymous，留下邮箱可以收到回复提示邮件"}))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Twikoo' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><!-- hexo injector body_end end --></body></html>
