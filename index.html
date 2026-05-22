@@ -67,97 +67,73 @@
       .service-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
+        gap: 16px;
         width: 100%;
         max-width: 600px;
       }
 
+      .page-title {
+        margin: 0 0 24px 0;
+        font-size: 28px;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
       .service-card {
         position: relative;
-        display: grid;
-        min-height: 172px;
-        padding: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        min-height: 64px;
+        padding: 16px 24px;
         overflow: hidden;
         border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 12px;
+        border-radius: 10px;
         background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 14px 42px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         transition: transform 170ms ease, border-color 170ms ease, box-shadow 170ms ease;
+        text-align: left;
       }
 
       .service-card::before {
         position: absolute;
         inset: 0 auto 0 0;
-        width: 5px;
+        width: 4px;
         content: "";
         background: var(--service-accent, var(--accent));
       }
 
       .service-card:hover {
         border-color: var(--service-accent, var(--accent));
-        box-shadow: 0 22px 54px rgba(0, 0, 0, 0.4);
-        transform: translateY(-4px);
-      }
-
-      .service-card__main {
-        display: grid;
-        align-content: space-between;
-        gap: 18px;
-        min-width: 0;
-      }
-
-      .service-card__top {
-        display: grid;
-        gap: 10px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+        transform: translateY(-3px);
       }
 
       .service-card__name {
         margin: 0;
-        font-size: 22px;
-        line-height: 1.18;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.3;
         word-break: break-word;
+        color: var(--ink);
+        flex: 1;
       }
 
-      .service-card__url {
-        display: block;
-        color: var(--muted);
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-        font-size: 13px;
-        overflow-wrap: anywhere;
-      }
-
-      .service-card__bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-      }
-
-      .service-card__route {
-        max-width: 70%;
-        padding: 5px 8px;
-        overflow: hidden;
-        border: 1px solid rgba(23, 32, 42, 0.1);
-        border-radius: 6px;
-        color: #2f3b48;
-        background: rgba(255, 255, 255, 0.62);
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-        font-size: 12px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .service-card__open {
+      .service-card__arrow {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 38px;
-        height: 38px;
-        border-radius: 8px;
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
         color: #ffffff;
         background: var(--service-accent, var(--accent));
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1;
+        flex-shrink: 0;
       }
 
       .empty-state {
@@ -175,8 +151,18 @@
         }
 
         .service-card {
-          min-height: 154px;
-          padding: 20px;
+          min-height: 56px;
+          padding: 14px 24px;
+        }
+
+        .service-card__name {
+          font-size: 16px;
+        }
+
+        .service-card__arrow {
+          width: 28px;
+          height: 28px;
+          font-size: 14px;
         }
       }
 
@@ -191,7 +177,8 @@
     </style>
   </head>
   <body>
-    <main class="page" style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 40px 20px;">
+    <main class="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 40px 20px;">
+      <h1 class="page-title">raccoon的网址导航</h1>
       <div class="service-list" id="service-list"></div>
       <div class="empty-state" id="empty-state">暂时还没有可展示的服务入口。</div>
     </main>
@@ -205,6 +192,10 @@
         {
           name: "毕业视频企划",
           route: "3000/"
+        },
+        {
+          name: "口琴谱生成器",
+          route: "2001/"
         }
       ];
 
@@ -244,16 +235,8 @@
           card.style.setProperty("--service-accent", item.accent || ACCENT_COLORS[index % ACCENT_COLORS.length]);
           card.setAttribute("aria-label", `打开${item.name}`);
           card.innerHTML = `
-            <span class="service-card__main">
-              <span class="service-card__top">
-                <strong class="service-card__name">${item.name}</strong>
-                <span class="service-card__url">${url}</span>
-              </span>
-              <span class="service-card__bottom">
-                <span class="service-card__route">${servicePath(item.route)}</span>
-                <span class="service-card__open" aria-hidden="true">↗</span>
-              </span>
-            </span>
+            <strong class="service-card__name">${item.name}</strong>
+            <span class="service-card__arrow" aria-hidden="true">↗</span>
           `;
           fragment.append(card);
         });
