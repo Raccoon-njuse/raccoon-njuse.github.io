@@ -1,19 +1,626 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Redirecting</title>
-    <meta http-equiv="refresh" content="0; url=http://124.222.19.212:3000/">
-    <link rel="canonical" href="http://124.222.19.212:3000/">
-    <script>
-      window.location.replace("http://124.222.19.212:3000/");
-    </script>
+    <meta name="theme-color" content="#f8fbff">
+    <meta
+      name="description"
+      content="raccoon 的服务导航页，收纳服务器上不同端口的小网站入口。"
+    >
+    <title>raccoon 的服务导航</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f8fbff;
+        --ink: #17202a;
+        --muted: #657181;
+        --paper: rgba(255, 255, 255, 0.88);
+        --paper-strong: rgba(255, 255, 255, 0.96);
+        --line: rgba(23, 32, 42, 0.12);
+        --shadow: 0 22px 70px rgba(34, 55, 80, 0.16);
+        --accent: #f47466;
+        --teal: #1f9d8a;
+        --gold: #d39a2d;
+        --blue: #4d79c7;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-height: 100%;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100%;
+        margin: 0;
+        color: var(--ink);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        line-height: 1.6;
+        letter-spacing: 0;
+        background:
+          linear-gradient(115deg, rgba(244, 116, 102, 0.1), transparent 32%),
+          linear-gradient(245deg, rgba(31, 157, 138, 0.12), transparent 34%),
+          linear-gradient(135deg, rgba(248, 251, 255, 0.96), rgba(238, 250, 246, 0.9) 46%, rgba(255, 248, 242, 0.92));
+      }
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: "";
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.34) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.34) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 76%);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        background: rgba(248, 251, 255, 0.74);
+        backdrop-filter: blur(18px);
+      }
+
+      .site-header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 66px;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+        font-weight: 800;
+      }
+
+      .brand__mark {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border: 1px solid rgba(244, 116, 102, 0.36);
+        border-radius: 8px;
+        color: #ffffff;
+        background: linear-gradient(135deg, var(--accent), var(--teal));
+        box-shadow: 0 12px 30px rgba(31, 157, 138, 0.24);
+      }
+
+      .brand__text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .top-nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .top-nav a {
+        padding: 9px 11px;
+        border-radius: 8px;
+        transition: color 160ms ease, background 160ms ease;
+      }
+
+      .top-nav a:hover {
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.72);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.72fr);
+        align-items: center;
+        gap: clamp(28px, 5vw, 70px);
+        min-height: calc(100vh - 66px);
+        padding: clamp(56px, 9vw, 112px) 0 clamp(44px, 7vw, 84px);
+      }
+
+      .hero__copy {
+        max-width: 690px;
+      }
+
+      h1 {
+        display: grid;
+        max-width: 10ch;
+        margin: 0;
+        font-size: clamp(48px, 8vw, 104px);
+        font-weight: 900;
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .title-line {
+        display: block;
+      }
+
+      .hero__subtitle {
+        margin: 26px 0 0;
+        color: #2f3b48;
+        font-size: clamp(20px, 2.5vw, 30px);
+        font-weight: 720;
+      }
+
+      .hero__summary {
+        max-width: 620px;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        font-weight: 760;
+        transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+      }
+
+      .button:hover {
+        border-color: rgba(23, 32, 42, 0.2);
+        background: rgba(255, 255, 255, 0.82);
+        transform: translateY(-2px);
+      }
+
+      .button--primary {
+        color: #ffffff;
+        border-color: transparent;
+        background: linear-gradient(135deg, #17202a, #315c6f);
+        box-shadow: 0 16px 34px rgba(23, 32, 42, 0.2);
+      }
+
+      .hero__panel {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        gap: 22px;
+        padding: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.56);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(20px);
+      }
+
+      .hero-visual {
+        width: min(320px, 100%);
+        aspect-ratio: 1;
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.88);
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 18px 46px rgba(23, 32, 42, 0.16);
+      }
+
+      .hero-visual img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .profile-lines {
+        display: grid;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .profile-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 44px;
+        gap: 14px;
+        padding: 0 14px;
+        border: 1px solid rgba(23, 32, 42, 0.1);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.64);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .profile-line strong {
+        color: var(--ink);
+        font-size: 15px;
+      }
+
+      .section {
+        padding: clamp(34px, 6vw, 74px) 0 clamp(60px, 8vw, 96px);
+      }
+
+      .section__head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 22px;
+      }
+
+      .section__head h2 {
+        margin: 0;
+        font-size: clamp(30px, 4vw, 48px);
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .section__head p {
+        max-width: 420px;
+        margin: 0;
+        color: var(--muted);
+        text-align: right;
+      }
+
+      .service-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .service-card {
+        position: relative;
+        display: grid;
+        min-height: 172px;
+        padding: 22px;
+        overflow: hidden;
+        border: 1px solid rgba(23, 32, 42, 0.12);
+        border-radius: 8px;
+        background: var(--paper);
+        box-shadow: 0 14px 42px rgba(34, 55, 80, 0.1);
+        transition: transform 170ms ease, border-color 170ms ease, box-shadow 170ms ease;
+      }
+
+      .service-card::before {
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 5px;
+        content: "";
+        background: var(--service-accent, var(--accent));
+      }
+
+      .service-card:hover {
+        border-color: color-mix(in srgb, var(--service-accent, var(--accent)) 52%, transparent);
+        box-shadow: 0 22px 54px rgba(34, 55, 80, 0.16);
+        transform: translateY(-4px);
+      }
+
+      .service-card__main {
+        display: grid;
+        align-content: space-between;
+        gap: 18px;
+        min-width: 0;
+      }
+
+      .service-card__top {
+        display: grid;
+        gap: 10px;
+      }
+
+      .service-card__name {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.18;
+        word-break: break-word;
+      }
+
+      .service-card__url {
+        display: block;
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 13px;
+        overflow-wrap: anywhere;
+      }
+
+      .service-card__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .service-card__route {
+        max-width: 70%;
+        padding: 5px 8px;
+        overflow: hidden;
+        border: 1px solid rgba(23, 32, 42, 0.1);
+        border-radius: 6px;
+        color: #2f3b48;
+        background: rgba(255, 255, 255, 0.62);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .service-card__open {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        color: #ffffff;
+        background: var(--service-accent, var(--accent));
+        font-size: 20px;
+        line-height: 1;
+      }
+
+      .empty-state {
+        display: none;
+        padding: 28px;
+        border: 1px dashed var(--line);
+        border-radius: 8px;
+        color: var(--muted);
+        background: var(--paper);
+      }
+
+      .site-footer {
+        padding: 30px 0 42px;
+        color: rgba(23, 32, 42, 0.62);
+        font-size: 14px;
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+
+        .hero__panel {
+          justify-self: start;
+          width: min(520px, 100%);
+        }
+
+        .service-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          width: min(100% - 28px, 1120px);
+        }
+
+        .site-header__inner {
+          min-height: 58px;
+        }
+
+        .top-nav {
+          gap: 2px;
+          font-size: 13px;
+        }
+
+        .top-nav a {
+          padding: 8px 7px;
+        }
+
+        h1 {
+          max-width: 100%;
+          font-size: clamp(42px, 13vw, 58px);
+        }
+
+        .hero__summary {
+          font-size: 16px;
+        }
+
+        .section__head {
+          display: grid;
+        }
+
+        .section__head p {
+          text-align: left;
+        }
+
+        .service-list {
+          grid-template-columns: 1fr;
+        }
+
+        .service-card {
+          min-height: 154px;
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .brand {
+          gap: 8px;
+        }
+
+        .brand__mark {
+          width: 32px;
+          height: 32px;
+        }
+
+        .brand__text {
+          max-width: 112px;
+        }
+
+        .top-nav a:not(:first-child) {
+          display: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+    </style>
   </head>
   <body>
-    <p>
-      Redirecting to
-      <a href="http://124.222.19.212:3000/">http://124.222.19.212:3000/</a>
-    </p>
+    <header class="site-header">
+      <div class="page site-header__inner">
+        <a class="brand" href="/" aria-label="raccoon 的服务导航首页">
+          <span class="brand__mark" aria-hidden="true">R</span>
+          <span class="brand__text">raccoon nav</span>
+        </a>
+        <nav class="top-nav" aria-label="页面导航">
+          <a href="#services">服务入口</a>
+          <a href="https://raccoon.love/">博客</a>
+          <a href="https://github.com/Raccoon-njuse">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <h1 id="hero-title">
+            <span class="title-line">raccoon 的</span>
+            <span class="title-line">服务导航</span>
+          </h1>
+          <p class="hero__subtitle">面朝大海，春暖花开</p>
+          <p class="hero__summary">
+            这里收纳一些跑在服务器上的小网站和临时项目入口。旧博客继续放文字、旅途、悠悠和技术记录，这一页只负责更快抵达正在运行的东西。
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#services">查看服务</a>
+            <a class="button" href="https://raccoon.love/">回到博客</a>
+          </div>
+        </div>
+
+        <aside class="hero__panel" aria-label="个人信息">
+          <figure class="hero-visual">
+            <img
+              src="assets/service-navigator.jpg"
+              alt="服务导航插画"
+            >
+          </figure>
+          <div class="profile-lines">
+            <div class="profile-line">
+              <span>站点</span>
+              <strong>raccoon的博客小站</strong>
+            </div>
+            <div class="profile-line">
+              <span>关键词</span>
+              <strong>njuse / 研支团 / 悠悠球 4A</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="page section" id="services" aria-labelledby="services-title">
+        <div class="section__head">
+          <h2 id="services-title">服务入口</h2>
+          <p><span id="service-count">0</span> 个入口连接到 124.222.19.212 上的不同端口或路径。</p>
+        </div>
+        <div class="service-list" id="service-list"></div>
+        <div class="empty-state" id="empty-state">暂时还没有可展示的服务入口。</div>
+      </section>
+    </main>
+
+    <footer class="page site-footer">
+      <span>raccoon.love · GitHub Pages service navigator</span>
+    </footer>
+
+    <script>
+      const SERVER_HOST = "124.222.19.212";
+
+      // 新增导航时复制一条对象，只改 name 和 route。
+      // route 写端口，或“端口/路径”，例如 "3000/"、"8080/admin"。
+      const SERVICE_LINKS = [
+        {
+          name: "毕业视频企划",
+          route: "3000/"
+        }
+      ];
+
+      const ACCENT_COLORS = ["#f47466", "#1f9d8a", "#4d79c7", "#d39a2d", "#7b6ed6"];
+
+      function normalizeRoute(route) {
+        return String(route)
+          .trim()
+          .replace(/^https?:\/\//i, "")
+          .replace(new RegExp(`^${SERVER_HOST}:?`), "")
+          .replace(/^:/, "")
+          .replace(/^\/+/, "");
+      }
+
+      function serviceUrl(route) {
+        return `http://${SERVER_HOST}:${normalizeRoute(route)}`;
+      }
+
+      function servicePath(route) {
+        return normalizeRoute(route).replace(/\/$/, "") || "/";
+      }
+
+      function renderServices() {
+        const list = document.querySelector("#service-list");
+        const count = document.querySelector("#service-count");
+        const empty = document.querySelector("#empty-state");
+        const fragment = document.createDocumentFragment();
+
+        count.textContent = SERVICE_LINKS.length;
+        empty.style.display = SERVICE_LINKS.length ? "none" : "block";
+
+        SERVICE_LINKS.forEach((item, index) => {
+          const url = serviceUrl(item.route);
+          const card = document.createElement("a");
+          card.className = "service-card";
+          card.href = url;
+          card.target = "_blank";
+          card.rel = "noopener noreferrer";
+          card.style.setProperty("--service-accent", item.accent || ACCENT_COLORS[index % ACCENT_COLORS.length]);
+          card.setAttribute("aria-label", `打开${item.name}`);
+          card.innerHTML = `
+            <span class="service-card__main">
+              <span class="service-card__top">
+                <strong class="service-card__name">${item.name}</strong>
+                <span class="service-card__url">${url}</span>
+              </span>
+              <span class="service-card__bottom">
+                <span class="service-card__route">${servicePath(item.route)}</span>
+                <span class="service-card__open" aria-hidden="true">↗</span>
+              </span>
+            </span>
+          `;
+          fragment.append(card);
+        });
+
+        list.replaceChildren(fragment);
+      }
+
+      renderServices();
+    </script>
   </body>
 </html>
